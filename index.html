@@ -66,7 +66,7 @@
   --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px;
   --s-7:48px; --s-8:64px; --s-9:96px; --s-10:120px;
 
-  --container:1180px;
+  --container:100%;
   --gutter:clamp(20px, 4vw, 40px);
   --section:clamp(64px, 9vw, 120px);
   --measure:66ch;
@@ -158,7 +158,7 @@ button{font:inherit;color:inherit}
 .nav__list a{color:var(--on-ink);text-decoration:none;padding:10px 12px;border-radius:8px;font-weight:500;display:inline-block}
 .nav__list a:hover{background:rgba(247,247,244,.08)}
 .nav__list a[aria-current="true"]{color:var(--accent)}
-.nav__toggle,.nav__close{display:none;width:44px;height:44px;border:1px solid var(--line-on-ink);background:transparent;border-radius:10px;place-items:center;cursor:pointer}
+.nav__toggle,.nav__close{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:10px;place-items:center;cursor:pointer}
 .nav__toggle svg,.nav__close svg{width:22px;height:22px}
 @media (max-width:860px){
   .nav__toggle{display:grid}
@@ -387,6 +387,8 @@ dialog.sheet::backdrop{background:rgba(17,19,24,.6)}
 .site-footer .bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s-3);border-top:1px solid var(--line-on-ink);margin-top:var(--s-7);padding-top:var(--s-5);font-size:.9rem;color:var(--on-ink-muted)}
 .site-footer .bottom button{background:none;border:0;color:var(--on-ink-muted);text-decoration:underline;cursor:pointer;padding:0;min-height:0}
 .site-footer .bottom button:hover{color:var(--accent)}
+.site-footer .bottom a{color:var(--on-ink-muted);text-decoration:underline}
+.site-footer .bottom a:hover{color:var(--accent)}
 @media (min-width:760px){.site-footer .cols{grid-template-columns:1.4fr 1fr 1fr}}
 .site-footer .bottom__end{display:flex;align-items:center;flex-wrap:wrap;gap:var(--s-5)}
 .site-footer .social{display:flex;gap:var(--s-2);margin:0}
@@ -572,7 +574,7 @@ html.anim .reveal.in{opacity:1;transform:none}
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">JS</span>Jay Shah</a>
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">YG</span>Yuktiva Growth</a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -1111,7 +1113,7 @@ html.anim .reveal.in{opacity:1;transform:none}
       <p class="form__status" id="a-status" role="status" aria-live="polite"></p>
       <div class="form__foot">
         <button class="btn btn--primary" type="submit" id="a-submit">Send me the teardown <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        <small>Your details are used only to reply to this request. <button type="button" class="link" data-open="privacy" style="min-height:0;padding:0">Privacy notice</button></small>
+        <small>Your details are used only to reply to this request. <a class="link" href="privacy-notice.html" style="min-height:0;padding:0">Privacy notice</a></small>
       </div>
     </form>
   </div>
@@ -1130,7 +1132,7 @@ html.anim .reveal.in{opacity:1;transform:none}
       </ul>
       <p class="muted">No deck, no pitch. If it's not a fit, you'll leave with a clearer view of your own numbers.</p>
       <div class="contact__direct">
-        <p>Prefer email? Write to <a href="mailto:shahjay450@gmail.com">shahjay450@gmail.com</a><br>Or call +91 93723 21258.</p>
+        <p>Prefer email? Write to <a href="mailto:jay.shah@yuktivagrowth.co.in">jay.shah@yuktivagrowth.co.in</a><br>Or call +91 93723 21258.</p>
       </div>
     </div>
 
@@ -1185,51 +1187,18 @@ html.anim .reveal.in{opacity:1;transform:none}
       <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
       <div class="form__foot">
         <button class="btn btn--primary" type="submit" id="f-submit">Send enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        <small>Your details are used only to reply to this enquiry. <button type="button" class="link" data-open="privacy" style="min-height:0;padding:0">Privacy notice</button></small>
+        <small>Your details are used only to reply to this enquiry. <a class="link" href="privacy-notice.html" style="min-height:0;padding:0">Privacy notice</a></small>
       </div>
     </form>
     <div class="form form__done" id="form-done" tabindex="-1">
       <h3>Enquiry sent</h3>
       <p>Thanks. I'll get back to you with a couple of times for a call, or with a question if I need one.</p>
-      <p class="muted">Didn't mean to send that? Email <a href="mailto:shahjay450@gmail.com">shahjay450@gmail.com</a> and I'll delete it.</p>
+      <p class="muted">Didn't mean to send that? Email <a href="mailto:jay.shah@yuktivagrowth.co.in">jay.shah@yuktivagrowth.co.in</a> and I'll delete it.</p>
     </div>
   </div>
 </section>
 
 </main>
-
-<dialog class="sheet" id="privacy" aria-labelledby="privacy-title">
-  <div class="sheet__inner">
-    <div class="sheet__top"><div><h2 id="privacy-title">Privacy notice</h2></div><button class="sheet__close" type="button" data-close aria-label="Close privacy notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-    <p>The enquiry form and the free-teardown form collect your name, email address, your website address (teardown form only), and whatever you choose to write, for the sole purpose of replying to you. The information is kept while we are in contact and deleted on request.</p>
-    <p>This site sets no cookies unless you accept analytics. Where analytics is switched on, a banner asks first; only if you accept does Google Analytics 4 record usage such as pages viewed and buttons clicked, so the site can be improved. Declining changes nothing about what you can do here. See the Cookie Policy for details.</p>
-    <p>The ad-spend calculator runs entirely in your browser. The numbers you type into it are not sent anywhere or stored.</p>
-    <p>To ask what is held about you, or to have it deleted, email <a href="mailto:shahjay450@gmail.com">shahjay450@gmail.com</a>.</p>
-  </div>
-</dialog>
-
-<!-- Draft wording for the two dialogs below. Have it reviewed against your actual practices and local law before launch. -->
-<dialog class="sheet" id="terms" aria-labelledby="terms-title">
-  <div class="sheet__inner">
-    <div class="sheet__top"><div><h2 id="terms-title">Terms of use</h2></div><button class="sheet__close" type="button" data-close aria-label="Close terms of use"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-    <p>This website provides general information about the services offered by Jay Shah. By using it you agree to these terms.</p>
-    <h3>Information only</h3><p>Nothing on this site is a quote, contract or professional advice for your situation. Any engagement is governed by a separate written agreement.</p>
-    <h3>Results</h3><p>Case studies and figures describe past work in specific circumstances. Results depend on many factors outside anyone's control, and past results do not guarantee future ones.</p>
-    <h3>Content and links</h3><p>The text, design and graphics on this site belong to their owner and may not be copied or reused without permission. Links to other sites are provided for convenience; we are not responsible for their content.</p>
-    <h3>Liability</h3><p>The site is provided as is. To the extent the law allows, we are not liable for loss arising from your use of it.</p>
-    <h3>Changes and contact</h3><p>These terms may be updated from time to time. Questions can be sent to <a href="mailto:shahjay450@gmail.com">shahjay450@gmail.com</a>.</p>
-  </div>
-</dialog>
-<dialog class="sheet" id="cookies" aria-labelledby="cookies-title">
-  <div class="sheet__inner">
-    <div class="sheet__top"><div><h2 id="cookies-title">Cookie Policy</h2></div><button class="sheet__close" type="button" data-close aria-label="Close cookie policy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-    <p>This site sets no cookies of its own and uses no advertising cookies. Analytics cookies are used only if you accept them.</p>
-    <p><b>Analytics (optional).</b> Where analytics is switched on, a banner asks for your permission before anything loads. If you accept, Google Analytics 4 sets cookies (such as <code>_ga</code>) and records which pages are viewed and which buttons are clicked, without names or form contents. If you decline, Google Analytics is not loaded at all.</p>
-    <p>The site's typeface is loaded from Google Fonts, so your browser contacts Google's servers and shares your IP address and browser details to receive it. Links to LinkedIn and WhatsApp take you to those services, which have their own cookie policies.</p>
-    <p id="consent-manage" hidden><button type="button" class="link" id="consent-reset" style="min-height:0;padding:0">Change my analytics choice</button></p>
-    <p>Questions: <a href="mailto:shahjay450@gmail.com">shahjay450@gmail.com</a>.</p>
-  </div>
-</dialog>
 
 <footer class="site-footer on-ink">
   <div class="container">
@@ -1252,18 +1221,17 @@ html.anim .reveal.in{opacity:1;transform:none}
       <div>
         <h3>Contact</h3>
         <ul>
-          <li><a href="mailto:shahjay450@gmail.com">shahjay450@gmail.com</a></li>
-          <li><a href="tel:+919372321258">+91 93723 21258</a></li>
+          <li><a href="mailto:jay.shah@yuktivagrowth.co.in">jay.shah@yuktivagrowth.co.in</a></li>
           <li><a href="https://www.linkedin.com/in/jay-shah4" rel="me noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="bottom">
-      <span>Jay Shah © <span id="year">2026</span></span>
+      <span>Yuktiva Growth © <span id="year">2026</span></span>
       <div class="bottom__end">
-        <button type="button" data-open="privacy">Privacy notice</button>
-        <button type="button" data-open="terms">Terms of use</button>
-        <button type="button" data-open="cookies">Cookie Policy</button>
+        <a href="privacy-notice.html">Privacy notice</a>
+        <a href="terms-of-use.html">Terms of use</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
         <ul class="social" aria-label="Social media">
           <li><a href="https://www.linkedin.com/in/jay-shah4" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
           <li><a href="https://wa.me/919372321258" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></li>
@@ -1274,7 +1242,7 @@ html.anim .reveal.in{opacity:1;transform:none}
 </footer>
 
 <div class="consent on-ink" id="consent" role="region" aria-label="Analytics cookies" hidden>
-  <p>Can I use Google Analytics cookies to see which pages and buttons work? Nothing loads unless you say yes. <button type="button" class="link" data-open="cookies" style="min-height:0;padding:0">Cookie Policy</button></p>
+  <p>Can I use Google Analytics cookies to see which pages and buttons work? Nothing loads unless you say yes. <a class="link" href="cookie-policy.html" style="min-height:0;padding:0">Cookie Policy</a></p>
   <div class="consent__btns">
     <button class="btn btn--primary" type="button" id="consent-accept">Accept</button>
     <button class="btn btn--secondary" type="button" id="consent-decline">Decline</button>
@@ -1287,7 +1255,7 @@ html.anim .reveal.in{opacity:1;transform:none}
   /* ---- Config: paste your form endpoint (Formspree, Basin, Netlify Forms, your own API).
      Leave empty and the form falls back to opening the visitor's email app. ---- */
   var FORM_ENDPOINT = '';
-  var CONTACT_EMAIL = 'shahjay450@gmail.com';
+  var CONTACT_EMAIL = 'jay.shah@yuktivagrowth.co.in';
   /* Analytics: paste your GA4 Measurement ID (looks like G-XXXXXXXXXX). Leave empty for no analytics at all.
      When set, Google Analytics loads ONLY after the visitor accepts the cookie banner. */
   var GA_ID = '';
@@ -1567,7 +1535,7 @@ html.anim .reveal.in{opacity:1;transform:none}
     });
   });
 
-  /* Dialogs: case studies and privacy notice */
+  /* Dialogs: case studies */
   var lastTrigger = null;
   $$('[data-open]').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -1753,7 +1721,7 @@ html.anim .reveal.in{opacity:1;transform:none}
   /* ---- Analytics with consent: nothing loads, and no request goes to Google, until the visitor accepts ---- */
   var readConsent = function(){ try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } };
   var saveConsent = function(v){ try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} };
-  var banner = $('#consent'), manage = $('#consent-manage');
+  var banner = $('#consent');
   var loadAnalytics = function(){
     if (window.gtag || !GA_ID) return;
     window.dataLayer = window.dataLayer || [];
@@ -1771,17 +1739,12 @@ html.anim .reveal.in{opacity:1;transform:none}
     if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'denied' });
   };
   if (GA_ID && banner) {
-    if (manage) manage.hidden = false;
-    var choice = readConsent();
+        var choice = readConsent();
     if (choice === 'granted') loadAnalytics();
     else if (!choice) banner.hidden = false;
     $('#consent-accept').addEventListener('click', function(){ saveConsent('granted'); banner.hidden = true; window['ga-disable-' + GA_ID] = false; loadAnalytics(); });
     $('#consent-decline').addEventListener('click', function(){ saveConsent('denied'); banner.hidden = true; stopAnalytics(); });
-    $('#consent-reset').addEventListener('click', function(){
-      try { localStorage.removeItem(CONSENT_KEY); } catch (e) {}
-      var d = $('#cookies'); if (d && d.open) d.close();
-      banner.hidden = false;
-    });
+
   }
 
   /* Click events for the conversion path (labels only, no personal data) */
